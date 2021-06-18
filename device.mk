@@ -27,14 +27,22 @@ PRODUCT_PACKAGES += \
     fstab.pxa988 \
     init_charging.rc \
     ueventd.pxa988.rc \
-    lpm.rc
+    lpm.rc \
+    init.rc \
+    init.pxa988.rc \
+    init.usb.rc \
+    init.trace.rc
 
 # Recovery rootdir
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/recovery/init.recovery.pxa988.rc:root/init.recovery.pxa988.rc \
     $(LOCAL_PATH)/recovery/twrp.fstab:recovery/root/etc/twrp.fstab \
     $(LOCAL_PATH)/rootdir/etc/extra.fstab:recovery/root/etc/extra.fstab \
-    
+    $(LOCAL_PATH)/rootdir/etc/init.rc:root/init.rc \
+    $(LOCAL_PATH)/rootdir/etc/init.pxa988.rc:root/init.pxa988.rcb \
+    $(LOCAL_PATH)/rootdir/etc/init.usb.rc:root/init.usb.rc \
+    $(LOCAL_PATH)/rootdir/etc/init.trace.rc:root/init.trace.rc \
+    $(LOCAL_PATH)/rootdir/etc/ueventd.pxa988.rc:root/ueventd.pxa988.rc
 
 # Enable repeatable keys in cwm
 PRODUCT_PROPERTY_OVERRIDES += \
